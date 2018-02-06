@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>MASCARA CPF</h1>
+	<form action="" id="formulario" method="post">
+		CPF: <input type="text" name="cpf"><br><br>
+		<a href="#" onclick="validar()">Validar</a>
+	</form>
+
+	<script>
+		function validar(){
+			var formulario = document.getElementById("formulario");
+			var cpf = formulario.cpf;
+
+			var re_cpf = /(\d{3})(\d{3})(\d{3})(\d{2})/;
+			
+			cpf.value = cpf.value.replace(re_cpf, "\$1.\$2.\$3\-\$4");
+		}
+	</script>
+
+</body>
+</html>
